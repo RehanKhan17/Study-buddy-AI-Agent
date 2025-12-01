@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coping Agent Pro — Frontend</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">🫧</div>
+        <div>
+          <h1>Study buddy</h1>
+          <small>Coping Agent • Student Support</small>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="tool active" data-mode="chat">💬 Chat</button>
+        <button class="tool" data-mode="study">📚Study helper</button>
+        <button class="tool" data-mode="coping">🧘 Coping Exercises</button>
+        <button class="tool" data-mode="safety">⚠️ Safety</button>
+        <label class="small">Theme</label>
+        <div class="row">
+          <label class="toggle">
+            <input id="themeToggle" type="checkbox" />
+            <span>Glass / Light</span>
+          </label>
+        </div>
+      </nav>
+
+      <div class="footer">
+        <button id="exportBtn" class="ghost">Export</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <h2 id="pageTitle">Student Support — Study buddy</h2>
+        <div class="controls">
+          <button id="breathBtn" title="Breathing helper">🫁 Breath</button>
+          <button id="voiceBtn" title="Voice input">🎙️</button>
+          <button id="ttsBtn" title="Voice output">🔈</button>
+        </div>
+      </header>
+
+      <section class="chat-panel">
+        <div id="chatWindow" class="chat-window"></div>
+
+        <div id="actionPanel" class="action-panel hidden"></div>
+
+        <div class="input-row">
+          <input id="userInput" type="text" placeholder="Type your message..." />
+          <button id="sendBtn" class="primary">Send</button>
+        </div>
+
+        <div id="breathHelper" class="breath hidden">
+          <div class="breath-circle"></div>
+          <div>Breathing... <span id="breathCount">0</span>s</div>
+          <button id="stopBreath" class="ghost">Stop</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- message template -->
+  <template id="msgTpl">
+    <div class="msg-row">
+      <div class="avatar"></div>
+      <div class="bubble"></div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
