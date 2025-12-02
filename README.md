@@ -4,3 +4,4 @@ StudyBuddy is an AI conversational assistant built for learning support, safe in
 The system supports voice input/output, multimode behavior, persistent chat, and an intuitive UI.
 
 This project is developed as part of the Kaggle AI Agent Capstone Challenge.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
